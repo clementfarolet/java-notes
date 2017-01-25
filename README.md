@@ -54,6 +54,8 @@ Description du singleton
 
 ##Observer
 
+![Pattern Observer](https://raw.githubusercontent.com/clm-a/java-notes/master/observer.png "Pattern Observer")
+
 Description d'observer
 
 ##MVC
