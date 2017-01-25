@@ -42,6 +42,13 @@ Usage du mot clé `abstract`
 
 ##Interfaces
 
+##Exceptions
+1.  try... catch... finally
+
+2. throw
+
+3. throws
+
 # Design Patterns
 
 ##Decorator
