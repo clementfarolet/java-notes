@@ -24,6 +24,47 @@ Une méthode est rendue unique et distincte grâce à son prototype : nom de la 
 
 ##Constructeur
 
+Les constructeurs permettent d'effectuer un certain traitement au moment de l'instanciation de l'objet lui même. Un constructeur est une méthode qui a la particularité de posséder le même nom que la classe à laquelle il appartient. Pour reprendre notre exemple, pour éviter d'invoquer les méthodes setNom() et setCouleur() juste après l'instanciation, on pourrait mettre ce traitement dans le constructeur de cette façon :
+
+EXEMPLE ######
+
+public class Chien extends Animal {
+    public Chien(String nom, String couleur) {
+        setNom(nom);
+        setCouleur(couleur);
+    }
+    public String aboie() {
+        return "OUAF OUAF";
+    }
+}
+
+Et instancier le Chien comme suit :
+
+Chien monChien = new Chien("Médor", "Noir");
+
+Cependant, si on veut que tous les animaux bénéficient de ce constructeur bien pratique, il aurait fallu le mettre directement dans la classe Animal. Dans ce cas, il faut aussi créer un constructeur dans la classe Chien qui invoque le constructeur de sa surclasse. Le mot clé super sert à ça :
+
+public class Animal {
+    String nom, couleur;
+    public Animal(String nom, String couleur) {
+        this.nom = nom;
+        this.couleur = couleur;
+    }
+    public getNom() {
+        return nom;
+    ...
+
+public class Chien extends Animal {
+    public Chien(String nom, String couleur) {
+        super(nom, couleur);
+    }
+    public String aboie() {
+        return "OUAF OUAF";
+    }
+}
+
+#############
+
 ##Static
 
 Usage du mot clé `static`
